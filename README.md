@@ -1,1 +1,1 @@
-J'ai éssayer de minitier a Python via ce premier jeu se nommant coin Strip!
+J'ai éssayer de m'initier a Python via ce premier jeu se nommant coin Strip!
