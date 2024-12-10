@@ -1,12 +1,10 @@
 def main():
 	print("1. Jouer")
 	print("2. Quittez")
-	menu_input = input("Choisissez votre chemin: ")
-	menu_input = int(menu_input)
+	menu_input = int(input("Choisissez votre chemin: "))
 	if menu_input == 1:
 		play_one_game()
 	else:
-		print()
 		print("Vous n'êtes pas digne de nous affronter")
 
 
@@ -80,16 +78,15 @@ def display_game_string(game_string):
 	
 def get_user_position_num(player_num):
 	print("PLAYER NUMBER: ", player_num)
-	position_number = input("Entrez le numéro de la position: ")
+	position_number = int(input("Entrez le numéro de la position: "))
 	return position_number
 
 def get_num_to_move():
-	move_number = input("Entrez le numéro du mouvement choisie: ")
-	move_number = int(move_number) 
+	move_number = int(input("Entrez le numéro du mouvement choisie: "))
 	return move_number
 	
 def move_dollar_to_the_left(game_string, position_number, move_num):
-	position_number = int(position_number) - 1
+	position_number = position_number - 1
 	index_move_number = position_number - move_num 
 	game_string = list(game_string)
 	game_string[position_number] = game_string[index_move_number]
@@ -105,7 +102,7 @@ def get_next_player_num (player_num):
 		return 1 
 		
 def féliciter_joueur_gagnant(player_num):	
-	winning_message = "** V O U S  A V E Z  G A G N E R **"
+	winning_message = "** V O U S  A V E Z  G A G N É **"
 	print("=" * len(winning_message))
 	print(winning_message)
 	print("     PLAYER NUMBER:", player_num)
